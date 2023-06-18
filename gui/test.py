@@ -7,15 +7,29 @@ customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("dark-blue")
 
 root = customtkinter.CTk()
+width = root.winfo_screenwidth()
+height = root.winfo_screenheight()
 # root.attributes("-fullscreen", True)
 
-root.title("Mega Mart Self Checkout System")
-root.attributes("-fullscreen", "True")
-root.columnconfigure(0, weight=1)
-root.rowconfigure(0, weight=1)
+# root.title("Mega Mart Self Checkout System")
+# root.attributes("-fullscreen", "True")
+# root.columnconfigure(0, weight=1)
+# root.rowconfigure(0, weight=1)
 
 # root.geometry("1920x1080")
+half0=customtkinter.CTkFrame(master=root, fg_color="yellow")#, height=height, width=width/2)
+half0.grid(row=0, column=0, sticky="WENS")
 
+half1=customtkinter.CTkFrame(master=root, fg_color="green")#, height=height, width=width/2)
+half1.grid(row=0, column=1, sticky="WENS")
+
+root.columnconfigure(0, weight=1)
+root.columnconfigure(1, weight=1)
+root.rowconfigure(0, weight=1)
+
+
+# half2=customtkinter.CTkFrame(master=root, fg_color="purple")#, height=250, width=250)
+# half2.grid(row=0, column=2, sticky="WENS")
 # def login():
 #     print("Test")
 
