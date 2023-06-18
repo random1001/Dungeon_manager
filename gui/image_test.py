@@ -5,8 +5,6 @@ ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")
 
 
-
-
 #Images
 default_image = ctk.CTkImage(light_image=Image.open("gui/comb.jpg"), size=(512, 512))
 new_image = ctk.CTkImage(light_image=Image.open("gui/profile_pic.jpg"), size=(512, 512))
